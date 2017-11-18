@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		864E1D4660DD32E4EDE45E0F /* Pods_Snapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F49F1ED35E95A4624206EF /* Pods_Snapchat.framework */; };
 		E249A47F1FBA384C0028AC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E249A47E1FBA384C0028AC5D /* AppDelegate.swift */; };
-		E249A4811FBA384C0028AC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E249A4801FBA384C0028AC5D /* ViewController.swift */; };
+		E249A4811FBA384C0028AC5D /* iniciarSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E249A4801FBA384C0028AC5D /* iniciarSessionViewController.swift */; };
 		E249A4841FBA384C0028AC5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E249A4821FBA384C0028AC5D /* Main.storyboard */; };
 		E249A4861FBA384C0028AC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E249A4851FBA384C0028AC5D /* Assets.xcassets */; };
 		E249A4891FBA384C0028AC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E249A4871FBA384C0028AC5D /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		ACD645BEF10B934237EFA125 /* Pods-Snapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.release.xcconfig"; sourceTree = "<group>"; };
 		E249A47B1FBA384C0028AC5D /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E249A47E1FBA384C0028AC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E249A4801FBA384C0028AC5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E249A4801FBA384C0028AC5D /* iniciarSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iniciarSessionViewController.swift; sourceTree = "<group>"; };
 		E249A4831FBA384C0028AC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E249A4851FBA384C0028AC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E249A4881FBA384C0028AC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				E249A47E1FBA384C0028AC5D /* AppDelegate.swift */,
-				E249A4801FBA384C0028AC5D /* ViewController.swift */,
+				E249A4801FBA384C0028AC5D /* iniciarSessionViewController.swift */,
 				E249A4821FBA384C0028AC5D /* Main.storyboard */,
 				E249A4851FBA384C0028AC5D /* Assets.xcassets */,
 				E249A4871FBA384C0028AC5D /* LaunchScreen.storyboard */,
@@ -203,12 +203,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E249A4811FBA384C0028AC5D /* ViewController.swift in Sources */,
+				E249A4811FBA384C0028AC5D /* iniciarSessionViewController.swift in Sources */,
 				E249A47F1FBA384C0028AC5D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
